@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<header>
+    <h1>Carbon Footprint Tracker</h1>
+    <h2>Calculate your environmental impact in minutes and discover simple, everyday steps to protect our planet.</h2>
+</header>
+<section>
+    <h2>Transport</h2>
+    <div class="form-group">
+        <label for="driving">Driving (km per week)</label>
+        <input type="number" id="driving" value="200" min="0">
+    </div>
+    <div class="form-group">
+        <label for="public-transport">Public Transport (km per week)</label>
+        <input type="number" id="public-transport" value="50" min="0">
+    </div>
+    <div class="form-group">
+        <label for="flights">Flights Taken (per year)</label>
+        <input type="number" id="flights" value="2" min="0">
+    </div>
+</section>   
+<section>
+    <h2>Home Energy</h2>
+    <div class="form-group">
+        <label for="electricity">Electricity (kWh per month)</label>
+        <input type="number" id="electricity" value="300" min="0">
+    </div>
+    <div class="form-group">
+        <label for="heating">Natural Gas Heating (kWh per month)</label>
+        <input type="number" id="heating" value="880" min="0">
+    </div>
+    <div class="form-group">
+        <label for="people">People Living in the Household</label>
+        <input type="number" id="people" value="2" min="1">
+    </div>
+</section>    
+<section>
+    <h2>Diet</h2>
+    <div class="diet-btn">
+        <input type="radio" id="meat-heavy" name="diet" value="2.5">
+        <label for="meat-heavy">Meat-Heavy</label>
+    </div>
+    <div class="diet-btn">
+        <input type="radio" id="average" name="diet" value="1.8">
+        <label for="meat-heavy">Average</label>
+    </div>
+    <div class="diet-btn">
+        <input type="radio" id="low-meat" name="diet" value="1.4">
+        <label for="low-meat">Low-meat</label>
+    </div>
+    <div class="diet-btn">
+        <input type="radio" id="pescatarian" name="diet" value="1.2">
+        <label for="pescatarian">Pescatarian</label>
+    </div>
+    <div class="diet-btn">
+        <input type="radio" id="vegetarian" name="diet" value="1.0">
+        <label for="vegetarian">Vegetarian</label>
+    </div>
+    <div class="diet-btn">
+        <input type="radio" id="vegan" name="diet" value="0.7">
+        <label for="vegan">Vegan</label>
+    </div>
+</section>   
+<aside>
+    <h2>Results</h2>
+    <div id="status" class="status-badge status-average"></div>
+    <div class="metric">
+        <div class="metric-val" id="total-footprint">0.0</div>
+        <div class="metric-unit">tonnes CO₂e / year</div>
+    </div>
+    <div id="breakdown">
+        
+    </div>
+    <div id="comparison-box">
+        <div>Global 2030 Average Target:</div>
+        <div class="comparison-line">
+            <span>Target:</span>
+            <span>2.5 tonnes CO₂e / year</span>
+        </div>
+        <div class="comparison-line" id="target-comparison">
+            <span>Status:</span>
+            <span class="target-met">On track, keep it up!</span>
+        </div>
+    </div>
+</aside> 
+
+</body>
+</html>
