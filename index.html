@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
     <h1>Carbon Footprint Tracker</h1>
     <h2>Calculate your environmental impact in minutes and discover simple, everyday steps to protect our planet.</h2>
 </header>
+<div class="container">
+<form id="footprint-form">
 <section>
     <h2>Transport</h2>
     <div class="form-group">
@@ -43,13 +45,14 @@
 </section>    
 <section>
     <h2>Diet</h2>
+    <div class="diet-group">
     <div class="diet-btn">
         <input type="radio" id="meat-heavy" name="diet" value="2.5">
         <label for="meat-heavy">Meat-Heavy</label>
     </div>
     <div class="diet-btn">
         <input type="radio" id="average" name="diet" value="1.8">
-        <label for="meat-heavy">Average</label>
+        <label for="average">Average</label>
     </div>
     <div class="diet-btn">
         <input type="radio" id="low-meat" name="diet" value="1.4">
@@ -67,9 +70,15 @@
         <input type="radio" id="vegan" name="diet" value="0.7">
         <label for="vegan">Vegan</label>
     </div>
-</section>   
-<aside>
-    <h2>Results</h2>
+    </div>
+</section>
+    <div class="form-actions">
+        <button type="submit" id="submit-btn">Calculate My Footprint</button>
+    </div>
+</form>   
+<div class="results-column">
+<h2 class="sidebar-title">Results</h2>
+<aside class="sidebar">
     <div id="status" class="status-badge status-average"></div>
     <div class="metric">
         <div class="metric-val" id="total-footprint">0.0</div>
@@ -90,6 +99,8 @@
         </div>
     </div>
 </aside> 
-
+</div>
+</div>
+<script src="script.js" defer></script>
 </body>
 </html>
