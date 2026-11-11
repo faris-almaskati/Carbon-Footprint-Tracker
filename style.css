@@ -92,11 +92,18 @@ header{
         min-width: 650px; 
     }
     
-    .form-group, .diet-group {
+    .form-group {
         text-align: center; 
         margin: 1rem auto;
         width: 100%;       
         max-width: 650px; 
+    }
+
+    .diet-group {
+        text-align: center; 
+        margin: 1rem auto;
+        width: 100%;       
+        max-width: 500px; 
     }
 
     #footprint-form input[type="number"] {
@@ -183,4 +190,31 @@ header{
 
 #target-comparison {
     margin-top: 0.5rem;      
+}
+
+.target-title {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.eco-tip-card {
+    background-color: #F4F7F5;
+    border-left: 4px solid #2E7D32;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1.25rem 0;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.eco-tip-card strong {
+    display: block;
+    color: #2E7D32;
+    margin-bottom: 0.4rem;
+}
+
+.eco-tip-card p {
+    margin: 0;
+    color: #1C2A22;
 }
