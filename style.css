@@ -14,10 +14,10 @@ header{
 }
 .form-group {
     background-color: #FFFFFF;
-    border-color: #D1DBD4;
+    border: 1px solid #D1DBD4; 
     margin: 1rem auto;
     padding: 1rem;
-    max-width: 400px;
+    max-width: 500px;
     border-radius: 8px;
 }
 #footprint-form .form-group label {
@@ -36,7 +36,7 @@ header{
 }
 .diet-group {
     background-color: #FFFFFF;
-    border-color: #D1DBD4;
+    border: 1px solid #D1DBD4; 
     margin: 1rem auto;
     padding: 1rem;
     max-width: 400px;
@@ -76,7 +76,6 @@ header{
     max-width: 400px;        
     margin: 0 auto; 
 }
-
 .sidebar-title {
     margin-top: 2rem;
     color: #1C2A22;
@@ -85,30 +84,99 @@ header{
 @media (min-width: 768px) {
     .container {
         flex-direction: row;  
-        gap: 2rem;            
+        gap: 2rem;        
+        align-items: flex-start;    
     }
-     #footprint-form {
+    #footprint-form {
         flex: 3;
+        min-width: 650px; 
     }
+    
     .form-group, .diet-group {
-        text-align: left; 
+        text-align: center; 
+        margin: 1rem auto;
+        width: 100%;       
+        max-width: 650px; 
     }
+
+    #footprint-form input[type="number"] {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
     .results-column {
         flex: 1;              
         align-items: stretch; 
+        min-width: 350px; 
     }
 
     .sidebar-title {
-        margin-top: 0;        
+        margin-top: 0;
+        padding-top: 0;        
         text-align: center;
     }
 
     .sidebar {
-        text-align: left;     
+        text-align: center;     
         max-width: 100%;     
+    }
+
+    #footprint-form section:first-of-type h2 {
+        margin-top: 0;
+    }
+
+    #footprint-form section:first-of-type .form-group:first-of-type {
+        margin-top: 0;
     }
 }
 
-#target-comparison{
+.status-low, .target-met{
     color: #2E7D32;
+    font-weight: bold;
+}
+
+.status-average, .target-warning {
+    color: #ED6C02;
+    font-weight: bold;
+}
+
+.status-high, .target-missed{
+    color: #D32F2F;
+    font-weight: bold;
+}
+
+.metric {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+    align-items: baseline;     
+    gap: 0.4rem;         
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.metric-val {
+    width: auto;            
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0;                
+    padding: 0;
+}
+
+.metric-unit {
+    width: auto;
+    font-size: 1.2rem;
+    color: #53645b;
+    margin: 0;
+    padding: 0;
+}
+
+.target-val {
+    font-size: 2rem;
+    font-weight: bold;     
+}
+
+.target-unit {
+    font-size: 1.2rem;
+    color: #53645b;
 }
