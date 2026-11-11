@@ -172,11 +172,15 @@ header{
 }
 
 .target-val {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;     
 }
 
 .target-unit {
     font-size: 1.2rem;
     color: #53645b;
+}
+
+#target-comparison {
+    margin-top: 0.5rem;      
 }
